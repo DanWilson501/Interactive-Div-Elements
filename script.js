@@ -7,3 +7,11 @@ body.selectAll("div")
     .enter()
     .append("div")
     .attr("class", "data-point");
+
+body.selectAll(".data-point")
+    .on("mouseover", function() {
+        d3.select(this).style("background-color", "blue");
+    })
+    .on("mouseout", function() {
+        d3.select(this).style("background-color", "orange");
+    });
